@@ -26,7 +26,6 @@
     "eslint-plugin-promise": "5.2.0",
     "nodemon": "2.0.15"
   },
-  "main": "index.js",
   "author": "YuliiaMai",
   "license": "ISC",
   "description": ""
