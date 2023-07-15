@@ -32,13 +32,9 @@
     "eslint-plugin-promise": "5.2.0",
     "nodemon": "2.0.15"
   },
-<<<<<<< HEAD
-=======
   "engines": {
     "node": ">=14.20.1"
   },
-  "main": "index.js",
->>>>>>> 7746ba36b7b8a0283112479258707165f533f739
   "author": "YuliiaMai",
   "license": "ISC"
 }
