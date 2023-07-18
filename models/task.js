@@ -3,7 +3,7 @@ const { Schema, model } = require("mongoose");
 const { handleMongooseError } = require('../helpers');
 
 const taskSchema = new Schema({
-    author: {
+    authorId: {
         type: Schema.Types.ObjectId,
         ref: 'user',
         required: true
@@ -35,10 +35,10 @@ const taskSchema = new Schema({
     comment: {
         type: String,
     },
-    token: {
-        type: String,
-        default: "",
-    }
+    // token: {
+    //     type: String,
+    //     default: "",
+    // }
 });
 
 taskSchema.post('save', handleMongooseError);
@@ -46,8 +46,8 @@ const Task = model('task', taskSchema);
 
 
 const addTaskSchema = Joi.object({
-    title: Joi.string().required,
-    category: Joi.string().required,
+    title: Joi.string().required(),
+    category: Joi.string().required(),
     deadline: Joi.string(),
     priority: Joi.string(),
     status: Joi.string(),

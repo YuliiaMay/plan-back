@@ -9,7 +9,6 @@ const { ctrlWrapper } = require('../../helpers');
 const updateAvatar = async (req, res) => {
     const { _id } = req.user;
     const {path: tempUpload, originalname} = req.file;
-    // const { originalname } = req.file;
     const fileName = `${_id}_${originalname}`;
 
     const tmpDir = path.join(__dirname, "../../", "tmp", originalname);
